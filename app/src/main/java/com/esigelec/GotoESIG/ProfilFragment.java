@@ -1,4 +1,4 @@
-package com.esigelec.ping39;
+package com.esigelec.GotoESIG;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,21 +12,21 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BatsFragment.OnFragmentInteractionListener} interface
+ * {@link ProfilFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BatsFragment#newInstance} factory method to
+ * Use the {@link ProfilFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BatsFragment extends Fragment {
+public class ProfilFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public BatsFragment() {
+    public ProfilFragment() {
         // Required empty public constructor
     }
 
-    public static BatsFragment newInstance() {
-        BatsFragment fragment = new BatsFragment();
+    public static ProfilFragment newInstance() {
+        ProfilFragment fragment = new ProfilFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +42,7 @@ public class BatsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bats, container, false);
+        return inflater.inflate(R.layout.fragment_profil, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

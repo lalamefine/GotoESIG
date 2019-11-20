@@ -1,4 +1,4 @@
-package com.esigelec.ping39;
+package com.esigelec.GotoESIG;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.esigelec.ping39", appContext.getPackageName());
+        assertEquals("com.esigelec.GotoESIG", appContext.getPackageName());
     }
 }

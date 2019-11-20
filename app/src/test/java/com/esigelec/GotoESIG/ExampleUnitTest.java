@@ -1,4 +1,4 @@
-package com.esigelec.ping39;
+package com.esigelec.GotoESIG;
 
 import org.junit.Test;
 

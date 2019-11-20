@@ -5,14 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_roulis"
-            android:title="Tanguage et Roulis" />
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Profil" />
         <item
-            android:id="@+id/nav_cap"
-            android:title="Maintien de cap" />
+            android:id="@+id/nav_ajoutertrajet"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Ajouter un trajet" />
         <item
-            android:id="@+id/nav_bats"
-            android:title="Bateaux" />
+            android:id="@+id/nav_mestrajets"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Mes trajets" />
+        <item
+            android:id="@+id/nav_cherchertrajet"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Chercher un trajet" />
+        <item
+            android:id="@+id/nav_evaluertrajet"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Evaluer un trajet" />
+        <item
+            android:id="@+id/nav_statistiques"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Statistiques" />
+        <item
+            android:id="@+id/nav_quitter"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Quitter" />
     </group>
 
 </menu>

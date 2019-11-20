@@ -1,4 +1,4 @@
-package com.esigelec.ping39;
+package com.esigelec.GotoESIG;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,21 +12,21 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CapFragment.OnFragmentInteractionListener} interface
+ * {@link AjouterTrajetFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CapFragment#newInstance} factory method to
+ * Use the {@link AjouterTrajetFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CapFragment extends Fragment {
+public class AjouterTrajetFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public CapFragment() {
+    public AjouterTrajetFragment() {
         // Required empty public constructor
     }
 
-    public static CapFragment newInstance() {
-        CapFragment fragment = new CapFragment();
+    public static AjouterTrajetFragment newInstance() {
+        AjouterTrajetFragment fragment = new AjouterTrajetFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -35,15 +35,14 @@ public class CapFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cap, container, false);
+        return inflater.inflate(R.layout.fragment_ajoutertrajet, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -70,16 +69,6 @@ public class CapFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }

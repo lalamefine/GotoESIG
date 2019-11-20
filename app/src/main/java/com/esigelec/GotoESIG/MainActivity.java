@@ -1,6 +1,5 @@
-package com.esigelec.ping39;
+package com.esigelec.GotoESIG;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,8 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
-        RoulisFragment.OnFragmentInteractionListener, BatsFragment.OnFragmentInteractionListener, CapFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+        , AjouterTrajetFragment.OnFragmentInteractionListener, ChercherTrajetFragment.OnFragmentInteractionListener
+        , ConnexionInscriptionFragment.OnFragmentInteractionListener, EvaluerTrajetFragment.OnFragmentInteractionListener
+        , MesTrajetFragment.OnFragmentInteractionListener, ProfilFragment.OnFragmentInteractionListener
+        , StatistiquesFragment.OnFragmentInteractionListener{
     DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        fragmentRoulis = RoulisFragment.newInstance();
-        this.startTransactionFragment(fragmentRoulis);
+        // Ouverture de la vue de connexion
+        this.startTransactionFragment(ConnexionInscriptionFragment.newInstance());
     }
 
     @Override
@@ -42,14 +44,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
+// -------- Right menu -------
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -68,9 +69,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //FOR FRAGMENTS
     // 1 - Declare fragment handled by Navigation Drawer
-    private Fragment fragmentBats;
-    private Fragment fragmentCap;
-    private Fragment fragmentRoulis;
+    private Fragment ajouterTrajetFragment;
+    private Fragment chercherTrajetFragment;
+    private Fragment evaluerTrajetFragment;
+    private Fragment mesTrajetFragment;
+    private Fragment profilFragment;
+    private Fragment statistiquesFragment;
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -79,17 +83,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // 6 - Show fragment after user clicked on a menu item
         switch (id){
-            case R.id.nav_bats :
-                if (fragmentBats == null) fragmentBats = BatsFragment.newInstance();
-                this.startTransactionFragment(fragmentBats);
+            case R.id.nav_ajoutertrajet :
+                if (ajouterTrajetFragment == null) ajouterTrajetFragment = AjouterTrajetFragment.newInstance();
+                this.startTransactionFragment(ajouterTrajetFragment);
                 break;
-            case R.id.nav_cap:
-                if (fragmentCap == null) fragmentCap = CapFragment.newInstance();
-                this.startTransactionFragment(fragmentCap);
+            case R.id.nav_cherchertrajet:
+                if (chercherTrajetFragment == null) chercherTrajetFragment = ChercherTrajetFragment.newInstance();
+                this.startTransactionFragment(chercherTrajetFragment);
                 break;
-            case R.id.nav_roulis:
-                if (fragmentRoulis == null) fragmentRoulis = RoulisFragment.newInstance();
-                this.startTransactionFragment(fragmentRoulis);
+            case R.id.nav_evaluertrajet:
+                if (evaluerTrajetFragment == null) evaluerTrajetFragment = EvaluerTrajetFragment.newInstance();
+                this.startTransactionFragment(evaluerTrajetFragment);
+                break;
+            case R.id.nav_mestrajets:
+                if (mesTrajetFragment == null) mesTrajetFragment = MesTrajetFragment.newInstance();
+                this.startTransactionFragment(mesTrajetFragment);
+                break;
+            case R.id.nav_profil:
+                if (profilFragment == null) profilFragment = ProfilFragment.newInstance();
+                this.startTransactionFragment(profilFragment);
+                break;
+            case R.id.nav_quitter:
+                //TODO: Quitter l'appli
+                break;
+            case R.id.nav_statistiques:
+                if (statistiquesFragment == null) statistiquesFragment = StatistiquesFragment.newInstance();
+                this.startTransactionFragment(statistiquesFragment);
                 break;
             default:
                 break;
