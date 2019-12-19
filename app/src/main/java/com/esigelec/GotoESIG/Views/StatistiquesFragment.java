@@ -1,4 +1,4 @@
-package com.esigelec.GotoESIG;
+package com.esigelec.GotoESIG.Views;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,25 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.esigelec.GotoESIG.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ConnexionInscriptionFragment.OnFragmentInteractionListener} interface
+ * {@link StatistiquesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ConnexionInscriptionFragment#newInstance} factory method to
+ * Use the {@link StatistiquesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConnexionInscriptionFragment extends Fragment {
+public class StatistiquesFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ConnexionInscriptionFragment() {
+    public StatistiquesFragment() {
         // Required empty public constructor
     }
 
-    public static ConnexionInscriptionFragment newInstance() {
-        ConnexionInscriptionFragment fragment = new ConnexionInscriptionFragment();
+    public static StatistiquesFragment newInstance() {
+        StatistiquesFragment fragment = new StatistiquesFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +44,7 @@ public class ConnexionInscriptionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_connexioninscription, container, false);
+        return inflater.inflate(R.layout.fragment_statistiques, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

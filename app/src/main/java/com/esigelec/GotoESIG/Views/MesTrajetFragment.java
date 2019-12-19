@@ -1,4 +1,4 @@
-package com.esigelec.GotoESIG;
+package com.esigelec.GotoESIG.Views;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,25 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.esigelec.GotoESIG.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ChercherTrajetFragment.OnFragmentInteractionListener} interface
+ * {@link MesTrajetFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ChercherTrajetFragment#newInstance} factory method to
+ * Use the {@link MesTrajetFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChercherTrajetFragment extends Fragment {
+public class MesTrajetFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ChercherTrajetFragment() {
+    public MesTrajetFragment() {
         // Required empty public constructor
     }
 
-    public static ChercherTrajetFragment newInstance() {
-        ChercherTrajetFragment fragment = new ChercherTrajetFragment();
+    public static MesTrajetFragment newInstance() {
+        MesTrajetFragment fragment = new MesTrajetFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +44,7 @@ public class ChercherTrajetFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cherchertrajet, container, false);
+        return inflater.inflate(R.layout.fragment_mestrajets, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

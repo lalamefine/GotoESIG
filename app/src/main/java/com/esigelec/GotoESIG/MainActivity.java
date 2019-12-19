@@ -12,6 +12,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.esigelec.GotoESIG.Views.AjouterTrajetFragment;
+import com.esigelec.GotoESIG.Views.ChercherTrajetFragment;
+import com.esigelec.GotoESIG.Views.ConnexionInscriptionFragment;
+import com.esigelec.GotoESIG.Views.EvaluerTrajetFragment;
+import com.esigelec.GotoESIG.Views.MesTrajetFragment;
+import com.esigelec.GotoESIG.Views.ProfilFragment;
+import com.esigelec.GotoESIG.Views.StatistiquesFragment;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
         , AjouterTrajetFragment.OnFragmentInteractionListener, ChercherTrajetFragment.OnFragmentInteractionListener
         , ConnexionInscriptionFragment.OnFragmentInteractionListener, EvaluerTrajetFragment.OnFragmentInteractionListener

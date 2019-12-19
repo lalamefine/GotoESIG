@@ -1,4 +1,4 @@
-package com.esigelec.GotoESIG;
+package com.esigelec.GotoESIG.Views;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,25 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.esigelec.GotoESIG.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AjouterTrajetFragment.OnFragmentInteractionListener} interface
+ * {@link ProfilFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AjouterTrajetFragment#newInstance} factory method to
+ * Use the {@link ProfilFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AjouterTrajetFragment extends Fragment {
+public class ProfilFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public AjouterTrajetFragment() {
+    public ProfilFragment() {
         // Required empty public constructor
     }
 
-    public static AjouterTrajetFragment newInstance() {
-        AjouterTrajetFragment fragment = new AjouterTrajetFragment();
+    public static ProfilFragment newInstance() {
+        ProfilFragment fragment = new ProfilFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +44,7 @@ public class AjouterTrajetFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ajoutertrajet, container, false);
+        return inflater.inflate(R.layout.fragment_profil, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
